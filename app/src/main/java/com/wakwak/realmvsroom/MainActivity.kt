@@ -36,11 +36,6 @@ class MainActivity : AppCompatActivity() {
             DogRealmDao(it).findDogsSortedByIdAsc()
             DogRealmDao(it).findDogsSortedByIdDesc()
         }, "realm_sort_asc_desc")
-
-        val uri = Uri.parse("https://hogehoge?foo=true")
-        uri.getQueryParameter("foo")?.toBoolean()
-
-        Uri.parse(null)
     }
 
     private fun bench(cb: (realm: Realm) -> Unit, tag: String) {
